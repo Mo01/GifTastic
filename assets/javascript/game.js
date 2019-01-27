@@ -18,7 +18,9 @@ function searchAnimal(animal) {
         method: "GET"
     }).then(function (response) {
         if(response.pagination.total_count < 10){
-            $("#animal-div").text("Common Man!!!!!!! Choose something realistic!!!!!")
+          var a =  $("#animal-div").text("Common Man!!!!!!! Choose something realistic!!!!!")
+          var b = $("<br>")
+           a.append(b).append($("<img>").attr("src", "assets/images/crazy.gif"))
             
         }
 
