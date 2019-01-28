@@ -6,7 +6,7 @@ topics.forEach(function(item){
     $("#animal-button").append(buttonImg);
     
 })
-
+//*****************************************************************//
 // Main Function
 function searchAnimal(animal) {
 
@@ -25,8 +25,8 @@ function searchAnimal(animal) {
         }
 
         else{
-         //To clear
-         $("#animal-div").empty();
+        //  //To clear the page
+        //  $("#animal-div").empty();
         //To choose diffrent inames every time we click*******
         var randomNum = Math.floor( Math.random()*50);
         // Constructing HTML containing the animal information
@@ -48,8 +48,9 @@ function searchAnimal(animal) {
                 // To store the new clickcount
                 $(this).val(currentVal);
             });
+          
 
-            divImg.append(animalRating, animalImage);
+            divImg.append(animalRating, animalImage, animalLink);
             $("#animal-div").append(divImg);
         }
         if( topics.indexOf(animal) === -1){
@@ -71,8 +72,7 @@ function searchAnimal(animal) {
     
 };
 
-//var animalImage = $("<img>").attr("src", response.data[i].images.original.url).attr("class", 
-
+//*********************************************************************************//
 
 // Event handler for user clicking the select-animal button
 $("#select-animal").on("click", function (event) {
