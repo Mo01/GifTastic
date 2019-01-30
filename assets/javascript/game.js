@@ -48,10 +48,11 @@ function searchAnimal(animal) {
                 // To store the new clickcount
                 $(this).val(currentVal);
             });
-          
+            // //link to download
+            // var animalLink = $("<a>").attr("href", response.data[i].images.original.url).text(response.data[i].title).attr("download", response.data[i].images.original.url);
 
-            divImg.append(animalRating, animalImage, animalLink);
-            $("#animal-div").append(divImg);
+            divImg.append(animalRating, animalImage);
+            $("#animal-div").prepend(divImg);
         }
         if( topics.indexOf(animal) === -1){
             topics.push(animal);
